@@ -1,6 +1,13 @@
 "use client";
 
 import React from "react";
+import SpaceCanvas from "@/components/ui/space-canvas";
+
+function ProductSpaceCanvasWrapper({ size }: { size: number }) {
+  // convert pixel input to a reasonable canvas size
+  const px = Math.max(32, Math.min(96, size * 6));
+  return <SpaceCanvas size={px} />;
+}
 
 interface ProductBadgeProps {
   size?: "sm" | "md" | "lg";
@@ -19,7 +26,14 @@ export const ProductBadge: React.FC<ProductBadgeProps> = ({ size = "sm", classNa
   return (
     <div className={`product-badge inline-flex items-center gap-3 ${className}`}>
       <div className={`relative ${s.svg}`} aria-hidden>
-        <svg viewBox="0 0 24 24" className={`w-full h-full planet-spin neon-glow`} xmlns="http://www.w3.org/2000/svg">
+        {/* decorative animated canvas */}
+        <div className="absolute inset-0 -z-10">
+          <div className="w-full h-full relative">
+            {/* space canvas fills the area */}
+            <ProductSpaceCanvasWrapper size={parseInt(s.svg.replace(/[^0-9]/g, "")) || 24} />
+          </div>
+        </div>
+        <svg viewBox="0 0 24 24" className={`w-full h-full planet-spin neon-glow relative z-10`} xmlns="http://www.w3.org/2000/svg">
           <defs>
             <radialGradient id="pb-g" cx="50%" cy="40%" r="60%">
               <stop offset="0%" stopColor="#fff" stopOpacity="0.95" />
