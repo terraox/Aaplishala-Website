@@ -36,6 +36,25 @@ export function Hero() {
           >
             AapliShala simplifies school management with digital attendance, timetables, and instant parent-teacher updates. Ideal for boosting efficiency, transparency, and communication in education.
           </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="max-w-2xl mx-auto mb-6"
+          >
+            <p className="text-sm text-muted-foreground italic">
+              a product by{' '}
+              <a
+                href="https://renasofttech.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-foreground hover:underline"
+                title="Rena Soft Tech"
+              >
+                Rena Soft Tech
+              </a>
+            </p>
+          </motion.div>
           <div className="flex justify-center mb-16">
             <a
               href="https://play.google.com/store/apps/details?id=com.aaplishala&pcampaignid=web_share"
