@@ -5,19 +5,31 @@ export function Footer() {
   return (
     <footer className="w-full border-t bg-background">
       <div className="container flex flex-col md:flex-row items-center justify-between gap-y-6 px-7 py-6 md:px-10">
-        {/* Left: Logo + Name */}
-        <div className="flex items-center gap-x-2">
-          <Image
-            src="/rena-logo.png"
-            alt="AapliShala logo"
-            width={24}
-            height={24}
-            className="h-6 w-6"
-            priority
-          />
-          <h2 className="text-lg font-bold text-foreground">
-            {siteConfig.name}
-          </h2>
+        {/* Left: Logo + Name + Product By */}
+        <div className="flex flex-col items-center md:items-start gap-y-1">
+          <div className="flex items-center gap-x-2">
+            <Image
+              src="/rena-logo.png"
+              alt="AapliShala logo"
+              width={24}
+              height={24}
+              className="h-6 w-6"
+              priority
+            />
+            <h2 className="text-lg font-bold text-foreground">{siteConfig.name}</h2>
+          </div>
+
+          <p className="text-sm text-muted-foreground italic">
+            a product by{' '}
+            <a
+              href="https://renasofttech.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-foreground hover:underline"
+            >
+              Rena Soft Tech
+            </a>
+          </p>
         </div>
 
         {/* Center: Rights */}
