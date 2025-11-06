@@ -42,18 +42,37 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.9 }}
             className="max-w-2xl mx-auto mb-6"
           >
-            <p className="text-sm text-muted-foreground italic">
-              a product by{' '}
-              <a
-                href="https://renasofttech.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-foreground hover:underline"
-                title="Rena Soft Tech"
+            <div className="flex items-center justify-center gap-2">
+              <svg
+                className="w-5 h-5 planet-spin neon-glow"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                Rena Soft Tech
-              </a>
-            </p>
+                <defs>
+                  <radialGradient id="hero-g1" cx="50%" cy="40%" r="60%">
+                    <stop offset="0%" stopColor="#fff" stopOpacity="0.95" />
+                    <stop offset="60%" stopColor="#f97316" stopOpacity="0.95" />
+                    <stop offset="100%" stopColor="#ef4444" stopOpacity="0.85" />
+                  </radialGradient>
+                </defs>
+                <circle cx="10" cy="12" r="4" fill="url(#hero-g1)" />
+                <ellipse cx="10" cy="12" rx="7" ry="2.2" transform="rotate(-20 10 12)" stroke="#f59e0b" strokeWidth="0.6" opacity="0.95" />
+              </svg>
+
+              <p className="text-sm text-muted-foreground">
+                a product by{' '}
+                <a
+                  href="https://renasofttech.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="gradient-text font-semibold"
+                  title="Rena Soft Tech"
+                >
+                  Rena Soft Tech
+                </a>
+              </p>
+            </div>
           </motion.div>
           <div className="flex justify-center mb-16">
             <a

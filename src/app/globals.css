@@ -93,3 +93,44 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .gradient-text {
+    background: linear-gradient(90deg, #7c3aed, #ec4899, #f59e0b);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 3s linear infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .planet-spin {
+    animation: spinPlanet 6s linear infinite;
+    transform-origin: center;
+  }
+
+  @keyframes spinPlanet {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .neon-glow {
+    filter: drop-shadow(0 0 8px rgba(236,72,153,0.35)) drop-shadow(0 0 6px rgba(124,58,237,0.25));
+  }
+}

@@ -19,17 +19,37 @@ export function Footer() {
             <h2 className="text-lg font-bold text-foreground">{siteConfig.name}</h2>
           </div>
 
-          <p className="text-sm text-muted-foreground italic">
-            a product by{' '}
-            <a
-              href="https://renasofttech.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-foreground hover:underline"
+          <div className="flex items-center gap-2">
+            {/* planet icon */}
+            <svg
+              className="w-4 h-4 planet-spin neon-glow"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Rena Soft Tech
-            </a>
-          </p>
+              <defs>
+                <radialGradient id="g1" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stopColor="#fff" stopOpacity="0.9" />
+                  <stop offset="60%" stopColor="#ec4899" stopOpacity="0.9" />
+                  <stop offset="100%" stopColor="#7c3aed" stopOpacity="0.8" />
+                </radialGradient>
+              </defs>
+              <circle cx="10" cy="12" r="4" fill="url(#g1)" />
+              <ellipse cx="10" cy="12" rx="7" ry="2.2" transform="rotate(-20 10 12)" stroke="#f97316" strokeWidth="0.6" opacity="0.9" />
+            </svg>
+
+            <p className="text-sm text-muted-foreground">
+              a product by{' '}
+              <a
+                href="https://renasofttech.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="gradient-text font-semibold"
+              >
+                Rena Soft Tech
+              </a>
+            </p>
+          </div>
         </div>
 
         {/* Center: Rights */}
