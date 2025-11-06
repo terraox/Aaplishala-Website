@@ -133,4 +133,21 @@
   .neon-glow {
     filter: drop-shadow(0 0 8px rgba(236,72,153,0.35)) drop-shadow(0 0 6px rgba(124,58,237,0.25));
   }
+  .product-badge .spark:nth-child(1) { top: 6%; left: 75%; }
+  .product-badge .spark:nth-child(2) { top: 78%; left: 20%; }
+  .product-badge .spark:nth-child(3) { top: 28%; left: 40%; }
+
+  .product-badge .spark {
+    position: absolute;
+    display: inline-block;
+    transform-origin: center;
+    animation: twinkle 2.5s infinite ease-in-out;
+    box-shadow: 0 0 6px rgba(255,255,255,0.85);
+  }
+
+  @keyframes twinkle {
+    0% { opacity: 0.1; transform: scale(0.6); }
+    50% { opacity: 1; transform: scale(1.0); }
+    100% { opacity: 0.2; transform: scale(0.7); }
+  }
 }
