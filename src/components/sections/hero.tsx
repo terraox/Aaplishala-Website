@@ -16,7 +16,7 @@ export function Hero() {
   const y5 = useTransform(scrollY, [0, 300], [100, 0]);
 
   return (
-    <Section id="hero" className="min-h-[100vh] w-full overflow-hidden">
+    <Section id="hero" className="min-h-[100vh] w-full overflow-x-hidden">
       <main className="mx-auto pt-8 sm:pt-12 md:pt-16 text-center relative px-4">
         <div className="relative">
           <motion.div
@@ -74,7 +74,7 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 h-auto sm:h-[500px] mt-8 sm:mt-12 select-none">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap items-center justify-center gap-6 sm:gap-6 xl:gap-8 h-auto sm:h-[360px] lg:h-[420px] xl:h-[500px] mt-8 sm:mt-12 select-none">
           <motion.img
             src="/student-profile.png"
             alt="Student Profile"
@@ -82,7 +82,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             style={{ y: y1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-40 sm:w-64 h-[333px] sm:h-[500px] flex-shrink-0"
+            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto flex-shrink-0"
           />
           <motion.img
             src="/student-timetable.png"
@@ -91,7 +91,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             style={{ y: y2 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-40 sm:w-64 h-[333px] sm:h-[500px] flex-shrink-0"
+            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto flex-shrink-0"
           />
           <motion.img
             src="/teacher-after-login.png"
@@ -100,7 +100,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             style={{ y: y3 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-40 sm:w-64 h-[333px] sm:h-[500px] flex-shrink-0"
+            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto flex-shrink-0"
           />
           <motion.img
             src="/teacher-attendance-class.png"
@@ -109,7 +109,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             style={{ y: y4 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-40 sm:w-64 h-[333px] sm:h-[500px] flex-shrink-0"
+            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto flex-shrink-0"
           />
           <motion.img
             src="/student-assignment.png"
@@ -118,7 +118,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             style={{ y: y5 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-40 sm:w-64 h-[333px] sm:h-[500px] flex-shrink-0"
+            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto flex-shrink-0"
           />
         </div>
       </main>
