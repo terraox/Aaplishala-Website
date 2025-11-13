@@ -74,7 +74,7 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="flex flex-nowrap items-center justify-center gap-4 sm:gap-8 h-auto sm:h-[500px] select-none">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 h-auto sm:h-[500px] mt-8 sm:mt-12 select-none">
           <motion.img
             src="/student-profile.png"
             alt="Student Profile"
