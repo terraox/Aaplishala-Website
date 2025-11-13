@@ -1,41 +1,20 @@
-import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { siteConfig } from "@/lib/config";
-import { fontSans } from "@/lib/fonts";
-import { cn, constructMetadata } from "@/lib/utils";
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata: Metadata = constructMetadata({
+export const metadata: Metadata = {
   title: "AapliShala",
-});
-
-export const viewport: Viewport = {
-  colorScheme: "light",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-  ],
+  description: "Smart School Management System",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-  <link rel="icon" href="/rena-logo.png" type="image/png" />
-      </head>
-      <body
-        className={cn(
-          "min-h-screen bg-background antialiased w-full mx-auto scroll-smooth",
-          fontSans.variable
-        )}
-      >
+    <html lang="en">
+      <body className="min-h-screen bg-background antialiased scroll-smooth">
         {children}
-        {/* <TailwindIndicator /> removed */}
       </body>
     </html>
   );

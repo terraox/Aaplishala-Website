@@ -16,8 +16,8 @@ export function Hero() {
   const y5 = useTransform(scrollY, [0, 300], [100, 0]);
 
   return (
-    <Section id="hero" className="min-h-[100vh] w-full overflow-x-hidden">
-      <main className="mx-auto pt-8 sm:pt-12 md:pt-16 text-center relative px-4">
+    <Section id="hero" className="w-full overflow-x-hidden">
+      <main className="mx-auto max-w-[1500px] pt-8 sm:pt-12 md:pt-16 lg:pt-24 lg:pb-16 text-center relative px-4">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 1.2 }}
@@ -26,8 +26,14 @@ export function Hero() {
             className="mb-16 relative z-20 flex flex-col items-center justify-center"
             style={{ transformOrigin: "top" }}
           >
-            <img src="/rena-logo.png" alt="Rena Logo" className="w-20 h-20 mb-2 mx-auto" />
-            <span className="font-bold text-2xl text-orange-500">AapliShala</span>
+            <img
+              src="/rena-logo.png"
+              alt="Rena Logo"
+              className="w-20 h-20 mb-2 mx-auto"
+            />
+            <span className="font-bold text-2xl text-orange-500">
+              AapliShala
+            </span>
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 12 }}
@@ -43,7 +49,9 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 1.1, ease: easeInOutCubic }}
             className="max-w-2xl mx-auto text-xl mb-8 font-medium text-balance"
           >
-            AapliShala simplifies school management with digital attendance, timetables, and instant parent-teacher updates. Ideal for boosting efficiency, transparency, and communication in education.
+            AapliShala simplifies school management with digital attendance,
+            timetables, and instant parent-teacher updates. Ideal for boosting
+            efficiency, transparency, and communication in education.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 6 }}
@@ -74,7 +82,8 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap items-center justify-center gap-6 sm:gap-6 xl:gap-8 h-auto sm:h-[360px] lg:h-[420px] xl:h-[500px] mt-8 sm:mt-12 select-none">
+        {/* phone strip: constrained max-height on lg to avoid pushing hero taller than viewport */}
+        <div className="flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap items-center justify-center gap-6 sm:gap-6 xl:gap-8 mt-8 sm:mt-12 select-none lg:max-h-[500px]">
           <motion.img
             src="/student-profile.png"
             alt="Student Profile"
@@ -82,7 +91,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             style={{ y: y1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto flex-shrink-0"
+            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto lg:max-h-[500px] flex-shrink-0"
           />
           <motion.img
             src="/student-timetable.png"
@@ -91,7 +100,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             style={{ y: y2 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto flex-shrink-0"
+            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto lg:max-h-[500px] flex-shrink-0"
           />
           <motion.img
             src="/teacher-after-login.png"
@@ -100,7 +109,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             style={{ y: y3 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto flex-shrink-0"
+            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto lg:max-h-[500px] flex-shrink-0"
           />
           <motion.img
             src="/teacher-attendance-class.png"
@@ -109,7 +118,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             style={{ y: y4 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto flex-shrink-0"
+            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto lg:max-h-[500px] flex-shrink-0"
           />
           <motion.img
             src="/student-assignment.png"
@@ -118,7 +127,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             style={{ y: y5 }}
             transition={{ duration: 1, delay: 1 }}
-            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto flex-shrink-0"
+            className="w-32 sm:w-40 md:w-44 lg:w-44 xl:w-64 h-auto lg:max-h-[500px] flex-shrink-0"
           />
         </div>
       </main>
