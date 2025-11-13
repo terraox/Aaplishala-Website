@@ -20,19 +20,27 @@ export function Hero() {
       <main className="mx-auto pt-8 sm:pt-12 md:pt-16 text-center relative px-4">
         <div className="relative">
           <motion.div
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
+            initial={{ opacity: 0, scale: 1.2 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.0, ease: easeInOutCubic }}
             className="mb-16 relative z-20 flex flex-col items-center justify-center"
             style={{ transformOrigin: "top" }}
           >
             <img src="/rena-logo.png" alt="Rena Logo" className="w-20 h-20 mb-2 mx-auto" />
             <span className="font-bold text-2xl text-orange-500">AapliShala</span>
           </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.9, ease: easeInOutCubic }}
+            className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-balance mx-auto mb-4"
+          >
+            Smart School Management System.
+          </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.7, ease: easeInOutCubic }}
+            transition={{ duration: 0.8, delay: 1.1, ease: easeInOutCubic }}
             className="max-w-2xl mx-auto text-xl mb-8 font-medium text-balance"
           >
             AapliShala simplifies school management with digital attendance, timetables, and instant parent-teacher updates. Ideal for boosting efficiency, transparency, and communication in education.
