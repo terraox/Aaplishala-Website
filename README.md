@@ -1,3 +1,10 @@
+
+## Live Landing Page 
+Check out the live landing page here: [Aaplishala Product Landing Page](https://aaplishalaproduct.netlify.app/)
+
+## Landing Page Preview
+<video src="https://github.com/user-attachments/assets/27b2d361-7173-4d12-9121-72f3f33c9c75" width="100%" controls></video>
+
 ## Development Commands
 
 ### Core Commands
@@ -43,56 +50,3 @@ This is a Next.js 14 application using the App Router pattern for AapliShala, a 
 - **Animations**: Framer Motion for complex animations and scroll effects
 - **Icons**: Lucide React and React Icons
 
-### Key Components & Configuration
-
-#### Site Configuration (`src/lib/config.tsx`)
-Central configuration file containing:
-- Site metadata and SEO settings
-- Feature definitions with icons and descriptions
-- Content for all sections (hero, features, benefits, FAQ, etc.)
-- Pricing plans and testimonials
-- This is the primary file to modify for content updates
-
-#### UI System
-- Built on shadcn/ui pattern with customizable components
-- Custom Tailwind configuration with CSS variables for theming
-- Consistent component API using class-variance-authority for variants
-- Path alias `@/*` maps to `src/*` for clean imports
-
-#### Animation System
-- Framer Motion integration for page transitions and scroll animations
-- Custom easing functions in `src/lib/animation.ts`
-- Scroll-based animations throughout the hero section
-- Tailwind custom animations for marquee, borders, and accordions
-
-### Development Guidelines
-
-#### Component Development
-- All UI components follow the shadcn/ui pattern in `src/components/ui/`
-- Section components are feature-specific and live in `src/components/sections/`
-- Use the `cn()` utility from `src/lib/utils.ts` for conditional class merging
-- Leverage TypeScript for prop types and configuration interfaces
-
-#### Content Management
-- All site content is managed through `src/lib/config.tsx`
-- Image assets should be placed in `public/` directory
-- Use the `siteConfig` object for consistent branding and metadata
-- SEO metadata is handled via `constructMetadata()` utility
-
-#### Styling Approach
-- Tailwind CSS with custom design tokens defined in `tailwind.config.ts`
-- CSS variables enable dynamic theming (dark mode ready)
-- Custom animations and keyframes for advanced interactions
-- Mobile-first responsive design principles
-
-#### Image Handling
-- Next.js Image component configured for `localhost` and `randomuser.me` domains
-- Device mockups are core to the design (Device-1.png through Device-9.png)
-- Brand assets include logos and app store badges
-- Images are optimized automatically by Next.js
-
-### Environment Configuration
-- Next.js configuration in `next.config.mjs` handles image domains
-- TypeScript paths configured for `@/*` alias
-- Development runs on `http://localhost:3000`
-- Production URL controlled via `NEXT_PUBLIC_APP_URL` environment variable
